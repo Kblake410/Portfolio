@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Artcee Craftee Hair</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Styles to make the services page look good */
+      .page-header {
+        min-height: 200px;
+        padding: 50px 50px;
+        margin-top: 50px;
+        background: var(--overlay-main-content);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+      }
+
+      .service-category {
+        background: var(--overlay-light);
+        color: var(--text-dark);
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-category h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--secondary-color);
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+      }
+
+      .service-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px 0;
+        border-bottom: 1px dashed #ccc;
+      }
+
+      .service-item:last-child {
+        border-bottom: none;
+      }
+
+      .service-details {
+        max-width: 75%;
+      }
+
+      .service-details h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .service-details p {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .service-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        min-width: 100px;
+        text-align: right;
+        padding-top: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2.5rem;
+        }
+        .service-category {
+          padding: 20px;
+        }
+        .service-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .service-details {
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+        .service-price {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-container"></div>
+
+    <header class="main-header">
+      <div class="logo">ARTCEE CRAFTEE HAIR</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="services.html" class="active">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="book.html">BOOK APPOINTMENT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <section class="page-header">
+        <h1>Our Creative Services Menu</h1>
+        <p>
+          From protective styles to restorative treatments, find the perfect
+          service for your natural crown.
+        </p>
+      </section>
+
+      <div class="services-container">
+        <div class="service-category">
+          <h2>Natural Hair Care & Maintenance</h2>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Signature Wash & Go</h3>
+              <p>
+                A clarifying wash, deep condition, and light styling. Perfect
+                for defined curls.
+              </p>
+            </div>
+            <div class="service-price">Starts at $65</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Hydration & Steam Treatment</h3>
+              <p>
+                Intensive moisture therapy for dry, brittle hair using
+                specialized products and a steamer.
+              </p>
+            </div>
+            <div class="service-price">Starts at $45</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-details"></div>
+            <div class="service-price"></div>
+          </div>
+        </div>
+
+        <div class="service-category">
+          <h2>Protective Styles (Requires Consultation)</h2>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Box Braids (Medium)</h3>
+              <p>
+                Long-lasting, medium-sized box braids. Price varies based on
+                length and size.
+              </p>
+            </div>
+            <div class="service-price">Starts at $180</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Knotless Braids</h3>
+              <p>
+                A gentler braiding technique that reduces tension on the scalp.
+              </p>
+            </div>
+            <div class="service-price">Starts at $220</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Twists & Flat Twists</h3>
+              <p>
+                Two-strand twists, great for defining curls or as a protective
+                style.
+              </p>
+            </div>
+            <div class="service-price">Starts at $100</div>
+          </div>
+        </div>
+
+        <div class="service-category">
+          <h2>Locs & Dreadlocks Services</h2>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Loc Maintenance (Retwist)</h3>
+              <p>
+                Palm-rolling or interlocking to maintain the locs, includes wash
+                and oil treatment.
+              </p>
+            </div>
+            <div class="service-price">Starts at $85</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-details">
+              <h3>Loc Startup</h3>
+              <p>
+                Consultation and initial styling to begin your loc journey
+                (coils, comb twist, or two-strand).
+              </p>
+            </div>
+            <div class="service-price">Starts at $150</div>
+          </div>
+        </div>
+      </div>
+      <section
+        class="page-header"
+        style="min-height: 150px; margin-top: 0; margin-bottom: 50px"
+      >
+        <p style="font-size: 1.2rem; margin-bottom: 20px">
+          Ready to book your transformation? Click below!
+        </p>
+        <a href="book.html" class="cta-button">BOOK APPOINTMENT NOW</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2024 Artcee Craftee Hair. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

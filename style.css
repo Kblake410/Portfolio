@@ -1,0 +1,283 @@
+/* Import Google Font (Optional, but recommended for the look) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define color variables for easy theming */
+    --primary-color: #6a0080; /* A deep purple/maroon from the image */
+    --secondary-color: #e6a71c; /* Gold/yellow accent */
+    --text-dark: #222222;
+    --text-light: #ffffff;
+    --overlay-dark: rgba(0, 0, 0, 0.75); /* Darker overlay for contrast */
+    --overlay-light: rgba(255, 255, 255, 0.95); /* Light background for card content */
+    --overlay-main-content: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the hero/featured sections */
+}
+
+/* -------------------------------------- */
+/* Global Reset and Typography */
+/* -------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex; /* For pushing the footer to the bottom */
+    flex-direction: column;
+}
+
+/* -------------------------------------- */
+/* 🌟 Background Styling (The Core Feature) */
+/* -------------------------------------- */
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Keeps it behind all content */
+    background-image: url('unnamejpgd.'); /* !!! MAKE SURE YOUR FILE NAME MATCHES !!! */
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    /* Optional: Add a subtle overlay to the image itself */
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3); */ 
+}
+
+/* -------------------------------------- */
+/* 👑 Header and Navigation */
+/* -------------------------------------- */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--overlay-dark); /* Dark, semi-transparent header bar */
+    border-bottom: 2px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    /* Slightly reduced font size to fit the longer name nicely */
+    font-size: 1.6rem; 
+    font-weight: 700;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav ul a:hover,
+.main-nav ul a.active {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+
+/* -------------------------------------- */
+/* 💖 Main Content Layout */
+/* -------------------------------------- */
+
+.content-wrapper {
+    flex-grow: 1; /* Allows content area to take up available space */
+    padding: 0 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative; /* To contain elements like the hero section */
+}
+
+/* -------------------------------------- */
+/* 🚀 Hero Section (The first large block) */
+/* -------------------------------------- */
+
+.hero-section {
+    min-height: 400px; /* Adjust height as needed */
+    padding: 100px 50px;
+    margin-top: 50px;
+    background: var(--overlay-main-content); /* Semi-transparent dark background */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 60%;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px var(--text-dark);
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: 2px solid var(--primary-color);
+}
+
+.cta-button:hover {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* -------------------------------------- */
+/* ✂️ Featured Section (The two-column cards) */
+/* -------------------------------------- */
+
+.featured-section {
+    display: flex;
+    gap: 30px;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.section-card {
+    flex: 1;
+    background: var(--overlay-light); /* Light, semi-transparent background for contrast */
+    color: var(--text-dark);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-card h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-card .subtitle {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.section-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 15px 0 20px 0;
+}
+
+.section-card ul li {
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+    margin-bottom: 8px;
+}
+
+.section-card ul li:before {
+    content: "• ";
+    color: var(--secondary-color); /* Bullet color */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.2em;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: var(--secondary-color);
+}
+
+/* -------------------------------------- */
+/* 📝 Footer */
+/* -------------------------------------- */
+
+.site-footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--overlay-dark);
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.site-footer p {
+    color: var(--text-light);
+}
+
+/* -------------------------------------- */
+/* Media Queries for Responsiveness */
+/* -------------------------------------- */
+
+@media (max-width: 900px) {
+    .main-header {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 5px 15px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 50px 20px;
+        margin-top: 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .featured-section {
+        flex-direction: column;
+    }
+    
+    .section-card {
+        padding: 30px;
+    }
+}
